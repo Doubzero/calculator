@@ -1,41 +1,76 @@
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-.page-wrapper {
-  display: flex;
-  justify-content: center;
+html {
+  height: 100%;
 }
-.title {
-  text-align: center;
+
+body {
+  padding: 50px;
+  font: "Curier New", monospace;
+  font-size: 1em;
 }
-.calc-container {
+#calculator {
+  width: 332px;
+  padding: 10px;
+  margin: auto;
+  background-color: rgb(222, 216, 216);
+  border-radius: 10px;
+  box-shadow: 0px 1px 7px 0px black;
+}
+
+#display {
   display: grid;
-  text-align: center;
-  border: 2px solid black;
-  width: 50%;
+  border: 1px solid black;
+  height: 70px;
+  color: black;
+  border-radius: 5px;
 }
-.results-container {
-  border: 3px solid black;
-  width: 100%;
-}
-input[type="text"] {
-  width: 100%;
+#display #currentPreview {
+  display: block;
+  text-align: right;
+  padding: 8px 7px;
   border: none;
-  text-align: end;
-  font-size: 20px;
+  background: none;
+  font-size: 1em;
 }
-input[type="button"] {
-  padding: 20px;
-  margin: 3px;
-  text-align: center;
-  width: 55px;
-  height: 55px;
+
+#display #resultWindow {
+  display: block;
+  text-align: right;
+  background: none;
+  padding: 0px 5px;
+  font-size: 2rem;
 }
-#clearBtn {
-  width: 26%;
+
+#keypad {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  padding-top: 10px;
+  font-family: inherit;
+  font-size: 1.5rem;
 }
-#resetBtn {
-  width: 26%;
+#keypad button {
+  width: 70px;
+  height: 70px;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#keypad button:hover {
+  background-color: aquamarine;
+}
+#keypad button.operator {
+  background-color: rgb(89, 204, 242);
+}
+#keypad button.operator:hover {
+  background-image: linear-gradient(
+    120deg,
+    rgb(215, 177, 177),
+    rgb(48, 243, 243)
+  );
 }
