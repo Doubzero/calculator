@@ -8,60 +8,38 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div class="page-wrapper">
-      <div class="calc-container">
-        <div class="header-container">
-          <h1 class="title">Calculator</h1>
+    <div id="page-wrapper">
+      <div id="calculator">
+        <div id="display">
+          <div id="currentPreview">0</div>
+          <div id="resultWindow">0</div>
         </div>
-        <div class="results-container">
-          <div class="user-window">
-            <!-- Shows full operations-->
-            <input
-              readonly
-              type="text"
-              name="selected"
-              id="selected"
-              placeholder="6 + 7 - 5 * 8"
-            />
-          </div>
-          <div class="result-window">
-            <!-- Display for result after "="-->
-            <input
-              readonly
-              type="text"
-              id="result"
-              name="result"
-              placeholder="result"
-            />
-          </div>
-        </div>
-        <div class="first-row">
-          <input type="button" value="Clear" id="clearBtn" />
-          <input type="button" value="Reset" id="resetBtn" />
-        </div>
-        <div class="second-row">
-          <input type="button" value="7" />
-          <input type="button" value="8" />
-          <input type="button" value="9" />
-          <input type="button" value="÷" />
-        </div>
-        <div class="third-row">
-          <input type="button" value="4" />
-          <input type="button" value="5" />
-          <input type="button" value="6" />
-          <input type="button" value="x" />
-        </div>
-        <div class="fourth-row">
-          <input type="button" value="1" />
-          <input type="button" value="2" />
-          <input type="button" value="3" />
-          <input type="button" value="-" />
-        </div>
-        <div class="fourth-row">
-          <input type="button" value=" . " />
-          <input type="button" value="0" />
-          <input type="button" value="=" />
-          <input type="button" value="+" />
+        <div id="keypad">
+          <button type="button" id="data-clear" data-clear>C/A</button>
+          <button type="button" data-backspace>&#8676</button>
+          <button type="button" data-percent>%</button>
+          <button type="button" data-operator="÷" class="operator">÷</button>
+
+          <button type="button" data-number>7</button>
+          <button type="button" data-number>8</button>
+          <button type="button" data-number>9</button>
+          <button type="button" data-operator class="operator">x</button>
+
+          <button type="button" data-number>4</button>
+          <button type="button" data-number>5</button>
+          <button type="button" data-number>6</button>
+          <button type="button" data-operator="-" class="operator">-</button>
+
+          <button type="button" data-number>1</button>
+          <button type="button" data-number>2</button>
+          <button type="button" data-number>3</button>
+          <button type="button" data-operator="+" class="operator">+</button>
+
+          <button type="button" data-negation>+/-</button>
+          <button type="button" data-number>0</button>
+          <button type="button" data-decimal=".">.</button>
+          <button type="button" data-equals="=" class="operator">=</button>
+
         </div>
       </div>
     </div>
