@@ -54,20 +54,20 @@ function clearAll() {
 }
 
 //calculate functions
-function add(a, b) {
-  return a + b;
+function add(n1, n2) {
+  return n1 + n2;
 }
-function subtract(a, b) {
-  return a - b;
+function subtract(n1, n2) {
+  return n1 - n2;
 }
-function multiply(a, b) {
-  return a * b;
+function multiply(n1, n2) {
+  return n1 * n2;
 }
-function divide(a, b) {
-  return a / b;
+function divide(n1, n2) {
+  return n1 / n2;
 }
-function divisable(a, b) {
-  return a % b;
+function divisable(n1, n2) {
+  return n1 % n2;
 }
 
 function operate(operator, n1, n2) {
@@ -103,6 +103,7 @@ function evaluate() {
       secondNumber
     );
   }
+
   finalResult = resultWindow.textContent;
 
   windowPreview.textContent = `${firstNumber} ${currentOperator} ${secondNumber} =`;
