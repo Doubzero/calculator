@@ -2,10 +2,12 @@ const numberButtons = document.querySelectorAll("[data-number]");
 const operatorButtons = document.querySelectorAll("[data-operator");
 const clearButton = document.getElementById("data-clear");
 const windowPreview = document.getElementById("currentPreview");
+const equalButton = document.getElementById("equalsBtn");
 const resultWindow = document.getElementById("resultWindow");
 
 //event Listeners
 clearButton.addEventListener("click", clearAll);
+
 //cycle through all objects to write button text to screen.
 numberButtons.forEach((button) =>
   button.addEventListener("click", () => writeToScreen(button.textContent))
@@ -26,4 +28,17 @@ function setOperation(operator) {
 function clearAll() {
   resultWindow.textContent = "0";
   windowPreview.textContent = "0";
+}
+//calculate functions
+function add(a, b) {
+  return a + b;
+}
+function subtract(a, b) {
+  return a - b;
+}
+function multiply(a, b) {
+  return a * b;
+}
+function divide(a, b) {
+  return a / b;
 }
