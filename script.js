@@ -26,7 +26,7 @@ operatorButtons.forEach((button) =>
 function resetWindow() {
   windowPreview.textContent = "0";
   if (finalResult !== null) {
-    resultWindow.textContent = `${finalResult} ${currentOperator}`;
+    resultWindow.textContent = ` ${finalResult} ${currentOperator}`;
   }
 }
 
@@ -82,7 +82,7 @@ function operate(operator, n1, n2) {
   if (operator === "+") {
     return add(n1, n2);
   } else if (operator === "-") {
-    return subtract(n2, n1);
+    return subtract(n1, n2);
   } else if (operator === "*") {
     return multiply(n1, n2);
   } else if (operator === "÷") {
@@ -105,8 +105,8 @@ function evaluate() {
     firstNumber = windowPreview.textContent;
     resultWindow.textContent = operate(
       currentOperator,
-      firstNumber,
-      secondNumber
+      secondNumber,
+      firstNumber
     );
   }
 
