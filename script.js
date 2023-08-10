@@ -2,12 +2,12 @@ let firstNumber = "";
 let secondNumber = "";
 let finalResult = null;
 let currentOperator = null;
+
 const numberButtons = document.querySelectorAll("[data-number]");
 const operatorButtons = document.querySelectorAll("[data-operator]");
 const clearButton = document.getElementById("data-clear");
 const windowPreview = document.getElementById("currentPreview");
 const equalButton = document.getElementById("equalsBtn");
-
 const resultWindow = document.getElementById("resultWindow");
 
 //event Listeners
@@ -21,6 +21,7 @@ numberButtons.forEach((button) =>
 operatorButtons.forEach((button) =>
   button.addEventListener("click", () => setOperation(button.textContent))
 );
+
 //helper functions
 function resetWindow() {
   windowPreview.textContent = "0";
@@ -28,13 +29,18 @@ function resetWindow() {
     resultWindow.textContent = `${finalResult} ${currentOperator}`;
   }
 }
-function clearNum() {}
+
 function writeToScreen(number) {
   if (windowPreview.textContent == "0") {
     windowPreview.textContent = " ";
   }
-
-  windowPreview.textContent += number;
+  if (currentOperator === null && finalResult !== null) {
+    clearAll();
+    windowPreview.textContent = " ";
+    windowPreview.textContent += number;
+  } else {
+    windowPreview.textContent += number;
+  }
 }
 function setOperation(operator) {
   if (currentOperator !== null) evaluate();
@@ -95,7 +101,7 @@ function evaluate() {
       firstNumber,
       secondNumber
     );
-  } else {
+  } else if (finalResult !== null) {
     firstNumber = windowPreview.textContent;
     resultWindow.textContent = operate(
       currentOperator,
