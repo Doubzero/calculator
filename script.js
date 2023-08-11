@@ -9,10 +9,14 @@ const clearButton = document.getElementById("data-clear");
 const windowPreview = document.getElementById("currentPreview");
 const equalButton = document.getElementById("equalsBtn");
 const resultWindow = document.getElementById("resultWindow");
+const decimalButton = document.getElementById("decimal");
+const backButton = document.getElementById("backspace");
 
 //event Listeners
 clearButton.addEventListener("click", clearAll);
 equalButton.addEventListener("click", evaluate);
+decimalButton.addEventListener("click", addDecimal);
+backButton.addEventListener("click", deletePrevious);
 
 //button cycles.
 numberButtons.forEach((button) =>
@@ -29,7 +33,6 @@ function resetWindow() {
     resultWindow.textContent = ` ${finalResult} ${currentOperator}`;
   }
 }
-
 function writeToScreen(number) {
   if (windowPreview.textContent == "0") {
     windowPreview.textContent = " ";
@@ -49,6 +52,13 @@ function setOperation(operator) {
   secondNumber = finalResult;
   resultWindow.textContent = `${firstNumber} ${currentOperator}`;
   resetWindow();
+}
+function addDecimal() {
+  if (windowPreview.textContent.includes(".")) return;
+  windowPreview.textContent += ".";
+}
+function deletePrevious() {
+  windowPreview.textContent = windowPreview.textContent.toString().slice(0, -1);
 }
 function clearAll() {
   resultWindow.textContent = "0";
