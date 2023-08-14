@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,17 +8,27 @@
 html {
   height: 100%;
 }
-
+h2 {
+  margin-top: -30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  color: white;
+  font-family: "Caprasimo", cursive;
+  font-weight: 100;
+}
 body {
   padding: 50px;
   font: "Curier New", monospace;
   font-size: 1em;
+  background-color: black;
 }
 #calculator {
   width: 332px;
   padding: 10px;
   margin: auto;
-  background-color: rgb(222, 216, 216);
+  background-color: rgb(3, 242, 242);
   border-radius: 10px;
   box-shadow: 0px 1px 7px 0px black;
 }
@@ -27,6 +39,8 @@ body {
   height: 70px;
   color: black;
   border-radius: 5px;
+  box-shadow: 0px 0px 0px 2px black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #display #currentPreview {
   display: block;
@@ -59,17 +73,24 @@ body {
   font-size: 1.5rem;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: 0px 1px 7px 0px rgb(0, 0, 0);
+  background-color: black;
+  color: white;
 }
+
 #keypad button:hover {
-  background-color: aquamarine;
+  transform: scale(1.1);
+  background-color: rgb(0, 98, 255);
 }
 #keypad button.operator {
-  background-color: rgb(89, 204, 242);
+  background-color: rgb(168, 248, 248);
+  color: black;
+  font-weight: 700;
 }
 #keypad button.operator:hover {
-  background-image: linear-gradient(
-    120deg,
-    rgb(215, 177, 177),
-    rgb(48, 243, 243)
-  );
+  background-color: rgb(0, 98, 255);
+}
+#equalsBtn {
+  grid-column: -2;
+  color: white;
 }
