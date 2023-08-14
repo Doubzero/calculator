@@ -4,4 +4,4 @@
 
 ### Includes +, - , / , \* and %(divisable)
 
-[Live Preview](doubzero.github.io/calculator) .
+[Live Preview](https://doubzero.github.io/calculator/) .
