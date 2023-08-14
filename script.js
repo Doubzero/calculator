@@ -13,6 +13,7 @@ const decimalButton = document.getElementById("decimal");
 const backButton = document.getElementById("backspace");
 
 //event Listeners
+window.addEventListener("keydown", keyboardSupport);
 clearButton.addEventListener("click", clearAll);
 equalButton.addEventListener("click", evaluate);
 decimalButton.addEventListener("click", addDecimal);
@@ -33,6 +34,7 @@ function resetWindow() {
     resultWindow.textContent = ` ${finalResult} ${currentOperator}`;
   }
 }
+
 function writeToScreen(number) {
   if (windowPreview.textContent == "0") {
     windowPreview.textContent = " ";
@@ -96,7 +98,7 @@ function operate(operator, n1, n2) {
     return subtract(n1, n2);
   } else if (operator === "*") {
     return multiply(n1, n2);
-  } else if (operator === "÷") {
+  } else if (operator === "÷" || operator === "/") {
     return divide(n1, n2);
   } else if (operator === "%") {
     return divisable(n1, n2);
@@ -126,4 +128,22 @@ function evaluate() {
   windowPreview.textContent = `${firstNumber} ${currentOperator} ${secondNumber} =`;
 
   currentOperator = null;
+  // checks for if dividing by 0 and resets display on clicking equals twice
+  if (finalResult === "Infinity") {
+    clearAll();
+    windowPreview.textContent = "Cannot divide by 0";
+    return;
+  } else if (windowPreview.textContent.includes("null")) {
+    clearAll();
+  }
+}
+
+function keyboardSupport(e) {
+  if (e.key === "Escape") clearAll();
+  if (e.key >= 0 && e.key <= 9) writeToScreen(e.key);
+  if (e.key === "Delete") deletePrevious();
+  if (e.key === "+" || e.key === "-" || e.key === "*" || e.key === "/")
+    setOperation(e.key);
+  if (e.key === "Enter") evaluate();
+  if (e.key === ".") addDecimal();
 }
