@@ -95,3 +95,15 @@ body {
   grid-column: -2;
   color: white;
 }
+
+@media screen and (max-width: 400px) {
+  #calculator {
+    width: 300px;
+    margin: auto;
+  }
+  #keypad button {
+    width: 60px;
+    height: 60px;
+    margin-left: 2px;
+  }
+}
