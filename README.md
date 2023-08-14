@@ -1,7 +1,7 @@
 # calculator
 
-## Simple Calculator made using HTML,CSS, and JavaScript.
+## Calculator made using HTML,CSS, and JavaScript.
 
-### Includes +, - , / , \* and %(divisable)
+### Includes simple arithmatic (add, subtract, multiply, divide, and %- divisable).
 
 [Live Preview](https://doubzero.github.io/calculator/) .
