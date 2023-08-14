@@ -62,6 +62,9 @@ function addDecimal() {
 
 function deletePrevious() {
   windowPreview.textContent = windowPreview.textContent.toString().slice(0, -1);
+  if (windowPreview.textContent === "") {
+    windowPreview.textContent = "0";
+  }
 }
 function clearAll() {
   resultWindow.textContent = "0";
