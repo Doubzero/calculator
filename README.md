@@ -1,6 +1,6 @@
 <h1 align="center">Calculator Web App</h1>
 
-![](./src/description/bookapp.png)
+![](./description/calcdespic.png)
 
 <p align="center"> 
     A simple calculator web app.
@@ -11,6 +11,7 @@
 [Live Preview](https://doubzero.github.io/calculator/)
 
 ## Short Description
+
 A calculator app that features a user-friendly interface with a numeric keypad and essential mathematical functions such as addition, subtraction, multiplication, and division.
 
 ## Tech Used
