@@ -1,7 +1,21 @@
-# calculator
+<h1 align="center">Calculator Web App</h1>
 
-## Calculator made using HTML,CSS, and JavaScript.
+![](./src/description/bookapp.png)
 
-### Includes simple arithmatic (add, subtract, multiply, divide, and %- divisable).
+<p align="center"> 
+    A simple calculator web app.
+    </p>
 
-[Live Preview](https://doubzero.github.io/calculator/) .
+## Live Preview
+
+[Live Preview](https://doubzero.github.io/calculator/)
+
+## Short Description
+A calculator app that features a user-friendly interface with a numeric keypad and essential mathematical functions such as addition, subtraction, multiplication, and division.
+
+## Tech Used
+
+- JavaScript
+- HTML
+- CSS
+- Git
