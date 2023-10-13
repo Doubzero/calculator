@@ -1,7 +1,7 @@
 <h1 align="center">Calculator Web App</h1>
 
 <div align="center">
-![](./description/calcdespic.png)
+<img src="./description/calcdespic.png">
 </div>
 
 <p align="center"> 
