@@ -1,6 +1,8 @@
 <h1 align="center">Calculator Web App</h1>
 
-<p align="center">![](./description/calcdespic.png)<p>
+<div align="center">
+![](./description/calcdespic.png)
+</div>
 
 <p align="center"> 
     A simple calculator web app.
